@@ -1,0 +1,22 @@
+version: '3.7'
+services:
+  app:
+    image: ./
+    container_name: pkteam-api
+    ports:
+      - '3001:3001'
+    links:
+      - 'postgres:pkteam-pgsql'
+      
+  postgres:
+    image: postgres
+    container_name: pkteam-pgsql
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    volumes:
+      - ./data/pkteam-pgsql/data:/var/lib/postgresql/data
+    restart: always
+    ports:
+      - '5432:5432'
