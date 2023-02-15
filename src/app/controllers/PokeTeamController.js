@@ -5,7 +5,7 @@ class PokeTeamController {
     async store(request, response) {
         const schema = Yup.object().shape({
             name: Yup.string().required(),
-            team: Yup.string().required(),
+            team: Yup.array().required(),
         })
         try {
             schema.validateSync(request.body, { abortEarly: false })
@@ -39,7 +39,7 @@ class PokeTeamController {
 
         const schema = Yup.object().shape({
             name: Yup.string(),
-            team: Yup.string(),
+            team: Yup.array(),
         })
 
         try {

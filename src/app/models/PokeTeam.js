@@ -5,7 +5,7 @@ class PokeTeam extends Model {
         super.init(
             {
                 name: Sequelize.STRING,
-                team: Sequelize.STRING
+                team: Sequelize.ARRAY(Sequelize.STRING)
             },
             {
                 sequelize,
