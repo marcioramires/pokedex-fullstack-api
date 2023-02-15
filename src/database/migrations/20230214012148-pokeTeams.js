@@ -15,7 +15,7 @@ module.exports = {
         allowNull: false,
       },
       team: {
-        type: Sequelize.ARRAY(Sequelize.STRING),
+        type: Sequelize.ARRAY(Sequelize.TEXT),
         allowNull: false,
       },
       created_at: {
