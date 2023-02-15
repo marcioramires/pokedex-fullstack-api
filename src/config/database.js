@@ -1,6 +1,6 @@
 module.exports = {
     dialect: 'postgres',
-    host: 'localhost',
+    host: 'pkteam-pgsql',
     username: 'postgres',
     password: 'postgres',
     database: 'postgres',
